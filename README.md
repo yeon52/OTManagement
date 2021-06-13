@@ -2,7 +2,9 @@
 
 - jsp, html, css
 - 반응형 웹디자인
-- oracle db 연결
+- oracle db <br><br>
+
+<h2>세부기능</h2>
 
 - 로그인, 로그아웃
 - 고객관리 
