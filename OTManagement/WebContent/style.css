@@ -1,0 +1,175 @@
+@charset "EUC-KR";
+
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #6799FF;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+  background-color: #EBF7FF;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 18px;
+  margin:0;
+}
+
+.navbar__logo {
+  font-size: 18px;
+}
+
+.navbar__logo i {
+  color: var(--accent-color);
+}
+
+.navbar__logo a {
+  padding-left: 8px;
+}
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.navbar__toggleBtn {
+  display: none;
+  position: absolute;
+  right: 24px;
+  color: var(--accent-color);
+}
+
+.link{
+	color:blue;
+}
+
+
+td{
+	border-bottom: 1px solid #444444;
+	padding: 10px;
+	font-family: 'Baloo Tammudu 2', sans-serif;
+	font-size:15px;
+}
+
+th{
+	border-bottom: 1px solid #444444;
+	padding: 10px;
+	font-family: 'Black Han Sans', sans-serif;
+	font-size:18px;
+}
+
+table {
+  width:100%;
+  margin:10px auto;
+  text-align: center;
+  border-collapse : collapse;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+
+.customer__table td{
+	font-size:13px;
+}
+
+.customer__table th{
+	font-size:10px;
+}
+
+td, th, h1, h2 {
+  text-align : center;
+  vertical-align : middle;
+}
+
+h1, div{
+	font-family: 'Black Han Sans', sans-serif;
+}
+
+
+h1{
+	font-size: 30px;
+}
+
+.image {
+  position:relative;
+}
+
+.intro{
+  position:absolute;
+  top:180px;
+  left:20px;
+}
+
+.title{
+position:absolute;
+  top:100px;
+  left:40px;
+}
+
+p{
+	margin-left:20px;
+	font-weight:bold;
+}
+button{
+	margin-left:10px;
+}
+@media screen and (max-width: 870px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 12px;
+  }
+
+  .navbar__menu{
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li{
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__login {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toggleBtn {
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__login.active {
+    display: flex;
+  }
+
+ .intro {
+ position:static;
+font-size: 15px;
+ }
+}
