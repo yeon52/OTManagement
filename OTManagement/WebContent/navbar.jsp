@@ -13,7 +13,7 @@
 <script src="main.js" defer></script>
 </head>
 <body>
-<%@ include file="db_connect.jsp"%>
+<%@ include file="db_connect.jsp" %>
 <nav class="navbar">
         <div class="navbar__logo">
             <i class="fas fa-apple-alt"></i>
@@ -29,6 +29,8 @@
 
 		<div class="navbar__login">
 		<%
+		String user_id = request.getRemoteUser();
+		String user="";		
 		PreparedStatement stmt_ = conn.prepareStatement("select first_name, last_name from employees where employee_id=?");
 		stmt_.setString(1,user_id);
 		ResultSet rs_ = stmt_.executeQuery();

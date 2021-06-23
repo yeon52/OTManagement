@@ -3,15 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<style>
-p.relative{
-position: relative;
-  left: -85px;
-
-}
-</style>
-
 <meta charset="EUC-KR">
 <title>OT 판매점 관리 시스템</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">

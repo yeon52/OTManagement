@@ -30,7 +30,7 @@
 	
 	while(rs.next()){
 		String orderID = rs.getString("order_id");
-		String orderDate = rs.getString("order_date");
+		String orderDate = rs.getString("order_date").split(" ")[0];
 		String status = rs.getString("status");
 		String salesMan = rs.getString("salesman_id");
 		

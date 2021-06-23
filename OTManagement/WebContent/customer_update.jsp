@@ -7,7 +7,7 @@
 <title>update customer</title>
 </head>
 <body>
-
+<%@ include file="navbar.jsp"%>
 <%
 String edit = request.getParameter("edit");
 if (edit == null) edit = "";
@@ -30,20 +30,25 @@ if (last_name == null) last_name = "";
 String customer_id = request.getParameter("customer_id");
 if (customer_id == null) customer_id = "";
 
+if(edit.equals("add"))
+	%><h1>고객 추가</h1><%
+else if(edit.equals("update"))
+	%><h1>고객 정보 수정</h1><%
 %>
+<div class="form">
 <form action="db_update.jsp" method="POST">
-	회사(고객)명 : <input type="text" name="company" value="<%=company%>"><br><br>
-	주소 : <input type="text" name="address" value="<%=address%>"><br><br>
-	홈페이지 : <input type="text" name="website" value="<%=website%>"><br><br>
-	신용한계 : <input type="text" name="credit" value="<%=credit%>"><br><br>
-	이메일 : <input type="email" name="email" value="<%=email%>"><br><br>
-	연락처 : <input type="text" name="phone" value="<%=phone%>"><br><br>
-	대표이름(first)<input type="text" name="first_name" value="<%=first_name%>"><br><br>
-	대표이름(last)<input type="text" name="last_name" value="<%=last_name%>"><br><br>
+	<p>회사(고객)명 : <input type="text" name="company" value="<%=company%>"></p>
+	<p>주소 : <input type="text" name="address" value="<%=address%>"></p>
+	<p>홈페이지 : <input type="text" name="website" value="<%=website%>"></p>
+	<p>신용한계 : <input type="text" name="credit" value="<%=credit%>"></p>
+	<p>이메일 : <input type="email" name="email" value="<%=email%>"></p>
+	<p>연락처 : <input type="text" name="phone" value="<%=phone%>"></p>
+	<p>대표이름(first) : <input type="text" name="first_name" value="<%=first_name%>"></p>
+	<p>대표이름(last) : <input type="text" name="last_name" value="<%=last_name%>"></p>
 	<input type="hidden" name="edit" value="<%=edit%>">
-	<input type="hidden" name="customer_id" value=<%=customer_id %>>
-	<input type="submit" value="등록">
-
+	<input type="hidden" name="customer_id" value=<%=customer_id %>><br>
+	<p style="text-align:center;"><input type="submit" value="등록"></p>
 </form>
+</div>
 </body>
 </html>

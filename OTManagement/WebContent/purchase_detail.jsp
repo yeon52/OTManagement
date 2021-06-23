@@ -26,7 +26,7 @@
     ResultSet rs = stmt.executeQuery();
     while(rs.next()){
     String status = rs.getString("status");
-    String orderDate = rs.getString("order_date");
+    String orderDate = rs.getString("order_date").split(" ")[0];
     String address = rs.getString("address");
     if(status.equals("Shipped")) status = "배송 완료";
 	else if(status.equals("Cancled")) status = "주문 취소";
@@ -71,7 +71,7 @@
 	}
 	rs2.close(); stmt.close(); conn.close();
 %>
-</table><br>
-&nbsp;&nbsp;<b>주문 금액 합계 : <%=sum_price %>$</b>
+</table>
+<p style="text-align:center;">주문 금액 합계 : <%=sum_price %>$</p><br>
 </body>
 </html>

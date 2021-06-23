@@ -7,6 +7,8 @@
 <title>login</title>
 </head>
 <body>
+<%@ include file="navbar.jsp" %><br>
+	<h2>로그인</h2><br>
 <% 
 	String userID = request.getRemoteUser();
 	if(userID!=null){
@@ -16,15 +18,13 @@
 		location.href="index.jsp";
 	</script>
 	<%} %>
-	<%@ include file="navbar.jsp" %><br><br>
-	<div style="text-align: center;">
-	<h2>로그인</h2>
-	<form action="j_security_check" method=POST>
-	&nbsp;&nbsp;&nbsp;ID : <input type="text" name="j_username"/><br><br>
-	PWD : <input type="password" name="j_password"/><br><br>
-	<input type="submit" value="로그인"/>
-
-	</form>
+	<div class="login">
+		<form action="j_security_check" method=POST><br>
+		<p>ID : <input type="text" name="j_username"/></p>
+		<p>PWD : <input type="password" name="j_password"/></p><br>
+		<p style="text-align:center; margin-left:100px"><input type="submit" value="로그인"/></p>
+	
+		</form>
 	</div>
 </body>
 </html>
