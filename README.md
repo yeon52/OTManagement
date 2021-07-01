@@ -2,7 +2,7 @@
 
 - jsp, html, css
 - 반응형 웹디자인
-- oracle db <br><br>
+- oracle db - https://www.oracletutorial.com/getting-started/oracle-sample-database/<br><br>
 
 <h2>세부기능</h2>
 
