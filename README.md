@@ -1,6 +1,6 @@
 # OTManagement - OT사 판매점 관리 시스템
 
-- jsp, html, css
+- jsp, html, css, javascript
 - 반응형 웹디자인
 - oracle db - https://www.oracletutorial.com/getting-started/oracle-sample-database/<br><br>
 
